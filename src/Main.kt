@@ -1,4 +1,9 @@
 fun main() {
-    val action: () -> Unit = { println("hello") }
-    repeatN(5, action)
+    val empGen = RandomEmployeeGenerator(10, 30)
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    empGen.minSalary = 50
+    empGen.maxSalary = 100
+    println(empGen.generateEmployee())
 }
